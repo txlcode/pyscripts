@@ -22,7 +22,7 @@ class EventHandler(ProcessEvent):
         print push_url
         push = "curl -H 'Content-Type:text/plain' --data-binary " + push_url + " 'http://data.zz.baidu.com/urls?site=static.cdsb.com&token=QLj59i1g2mD8gUVd'"
         os.system(push)
-"""事件处理"""
+ """事件处理"""
  def process_IN_CREATE(self, event):
         print "CREATE event:", event.pathname
         logging.info("CREATE event : %s  %s" % (os.path.join(event.path,event.name),datetime.datetime.now()))
